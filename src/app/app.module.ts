@@ -8,13 +8,16 @@ import { HttpModule } from '@angular/http';
 
 
 
+
 import { AppComponent } from './app.component';
 import {TodoNavComponent} from './todo.nav.component';
+import {TodoValidate} from './todo.validate.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TodoNavComponent
+    TodoNavComponent,
+    TodoValidate
   ],
   imports: [
     BrowserModule,

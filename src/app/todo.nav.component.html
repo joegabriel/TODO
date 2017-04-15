@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" *ngIf="navData.isValidMobileNumber" >
   <div class="col-sm-3">
     <div class="sidebar-nav">
       <div class="navbar navbar-default" role="navigation">
@@ -33,5 +33,24 @@
   </div>
   <div class="col-sm-9">
     Main content goes here
+    <!--<todo-validate> </todo-validate> -->
+
   </div>
 </div>
+    <div class="modal-dialog" style="width: 800px;" *ngIf="!navData.isValidMobileNumber">
+                <div class="modal-content" >
+                   <div class="modal-header">
+                     <button type="button" class="close"  >&times;</button>
+                     <h4 class="modal-title">Validate Phonenumber</h4>
+                   </div>
+                   <div class="modal-body">
+                    <label for="txtPhn">Phone Number:</label>
+                        <input #txtPhoneNumber placeholder="Mobile Number" class="form-control" id="txtPhn">
+                         <label for="txtPhn">{{navData.mobileNumber}}</label>
+                   </div>
+
+                   <div class="modal-footer">
+                     <button type="button" class="btn btn-primary" (click)="setnavData(txtPhoneNumber.value)">Submit</button>
+                   </div>
+                </div>
+             </div>
