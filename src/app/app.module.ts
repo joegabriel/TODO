@@ -12,12 +12,14 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import {TodoNavComponent} from './todo.nav.component';
 import {TodoValidate} from './todo.validate.component';
+import {TodoMain} from './todo.main.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TodoNavComponent,
-    TodoValidate
+    TodoValidate,
+    TodoMain
   ],
   imports: [
     BrowserModule,

@@ -12,6 +12,7 @@ import {TodoNavService} from './todo.nav.service';
 export class TodoNavComponent {
 
   navData:NavData;
+  showTodoMain: boolean;
   constructor(private _todoService:TodoNavService){
     this.navData=new NavData("",false,"");
 
@@ -21,9 +22,15 @@ export class TodoNavComponent {
     setnavData(value){
       this.navData.isValidMobileNumber=true;
       this.navData.mobileNumber=value;
+      this.showTodoMain=false;
     }
     getnavData(){
       return this.navData;
     }
 
+    setTodoMainComponent()
+      {
+          this.showTodoMain=true;
+         
+    }
 }

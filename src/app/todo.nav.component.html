@@ -18,7 +18,7 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu <b class="caret"></b></a>
               <ul class="dropdown-menu">
                   <li *ngFor="let m of menuData" >
-                      <a href="#">
+                      <a href="#" (click)="setTodoMainComponent()">
                           {{m.name}}
                       </a>
                        </li>
@@ -33,6 +33,7 @@
   </div>
   <div class="col-sm-9">
     Main content goes here
+    <todo-main [showMainComponent]="showTodoMain"></todo-main>
     <!--<todo-validate> </todo-validate> -->
 
   </div>
