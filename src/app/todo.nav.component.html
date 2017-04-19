@@ -18,7 +18,7 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu <b class="caret"></b></a>
               <ul class="dropdown-menu">
                   <li *ngFor="let m of menuData" >
-                      <a href="#" (click)="setTodoMainComponent()">
+                      <a href="#" (click)="setTodoMainComponent(menuVal.id)" id={{m.id}} #menuVal>
                           {{m.name}}
                       </a>
                        </li>

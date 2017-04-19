@@ -14,7 +14,7 @@ export class TodoNavComponent {
   navData:NavData;
   showTodoMain: boolean;
   constructor(private _todoService:TodoNavService){
-    this.navData=new NavData("",false,"");
+    this.navData=new NavData("",false,"",0);
 
   }
     menuData=this._todoService.getNavData();
@@ -28,9 +28,25 @@ export class TodoNavComponent {
       return this.navData;
     }
 
-    setTodoMainComponent()
+    setTodoMainComponent(id)
       {
-          this.showTodoMain=true;
+       
+        
+        switch (id)
+        {
+          case "1":
+           this.showTodoMain=false;
+           break;
+           case "2":
+           this.showTodoMain=true;
+           break;
+           case "3":
+           this.showTodoMain=false
+           break
+        
+      }
+       
+         
          
     }
 }
