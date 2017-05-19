@@ -8,7 +8,7 @@ import 'rxjs/add/operator/map';
 import {environment} from '../environments/environment';
 import {TodoMapper}from './todo.nav.data.component';
 @Injectable()
-export class HttpServices{
+export class HttpServices<T>{
     data:string;
     urlBase:string;
     actionTodo:string;
@@ -16,7 +16,8 @@ export class HttpServices{
       this.urlBase=environment.urlBase;
       this.actionTodo="Todo";
     }
-    getTodoData():Observable<TodoMapper>{
+    getTodoData():Observable<T>{
+
 
          return this.http.get(this.urlBase+this.actionTodo,{headers:this.getHeaders()}).map(this.extractData).catch(this.handleError);
 

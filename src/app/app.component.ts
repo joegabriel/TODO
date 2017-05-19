@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
   title:string;
   todoMapper:TodoMapper;
    mode = 'Observable';
-  constructor(private _httpService:HttpServices){
+  constructor(private _httpService:HttpServices<TodoMapper>){
     this.title="";
    this.todoMapper=new TodoMapper();
     
