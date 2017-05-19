@@ -21,10 +21,12 @@
         "styles.css"
       ],
       "scripts": [],
-      "environments": {
+      "environmentSource": {
         "source": "environments/environment.ts",
-        "dev": "environments/environment.ts",
+        "environments":{
+          "dev": "environments/environment.ts",
         "prod": "environments/environment.prod.ts"
+        }
       }
     }
   ],

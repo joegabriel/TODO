@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 
-
 export class NavData{
 
     name:string;
@@ -14,4 +13,13 @@ export class NavData{
         this.id=i;
 
      }
+}
+export class TodoMapper {
+    todoTask:string;
+    isActive:boolean;
+    todoTaskDate:string;
+    constructor(){
+        this.todoTask="Todo Application";
+    }
+
 }
