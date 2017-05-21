@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  urlBase:"http://localhost/devspace/api/"
+  urlBase:"http://192.168.1.5/devspace/api/"
 };

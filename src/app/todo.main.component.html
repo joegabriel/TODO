@@ -1,11 +1,12 @@
 <div *ngIf="showMainComponent">
 <div class="form">
   <div class="input-group">
-    <input type="text" class="form-control">
+    <input type="text" class="form-control" #txtTodo>
     <span class="input-group-btn">
-      <button class="btn btn-default" type="button">
+      <button class="btn btn-default" type="button" (click)="addTodo(txtTodo.value)">
         <span class="glyphicon glyphicon-plus"></span> Add Task</button>
     </span>
+    <!--<todo-list></todo-list>-->
   </div>
 </div>
 <hr/>

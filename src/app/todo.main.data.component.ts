@@ -3,8 +3,8 @@ import { Component } from '@angular/core';
 
 export class TodoMainData{
    task:string;
-    activity:Array<string>;
-    activityDate:Date;
+    activity:string;
+    activityDate:string;
     constructor(t,a,d){
         this.task=t;
         this.activity=a;
