@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {NavData} from './todo.nav.data.component';
 import {TodoNavService} from './todo.nav.service';
+import {TodoFooter} from './todo.footer.component';
 
 
 @Component({
@@ -9,13 +10,15 @@ import {TodoNavService} from './todo.nav.service';
   providers:[TodoNavService]
 
 })
-export class TodoNavComponent {
+export class TodoNavComponent  {
 
   navData:NavData;
   showTodoMain: boolean;
+  footerData:TodoFooter;
   constructor(private _todoService:TodoNavService){
     this.navData=new NavData("",false,"",0);
-
+    this.footerData=new TodoFooter();
+  
   }
     menuData=this._todoService.getNavData();
 
@@ -23,6 +26,8 @@ export class TodoNavComponent {
       this.navData.isValidMobileNumber=true;
       this.navData.mobileNumber=value;
       this.showTodoMain=false;
+      
+
     }
     getnavData(){
       return this.navData;
@@ -39,6 +44,8 @@ export class TodoNavComponent {
            break;
            case "2":
            this.showTodoMain=true;
+            this.footerData.FooterValue="Test Footer";
+          
            break;
            case "3":
            this.showTodoMain=false
@@ -49,4 +56,5 @@ export class TodoNavComponent {
          
          
     }
+ 
 }

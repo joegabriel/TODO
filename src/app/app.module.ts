@@ -13,7 +13,6 @@ import { AppComponent } from './app.component';
 import {TodoNavComponent} from './todo.nav.component';
 import {TodoValidate} from './todo.validate.component';
 import {TodoMain} from './todo.main.component';
-import{TodoList} from './todo.list.component';
 import{TodoFooter} from './todo.footer.component';
 
 @NgModule({
@@ -23,6 +22,7 @@ import{TodoFooter} from './todo.footer.component';
     TodoValidate,
     TodoMain,
     TodoFooter
+
   ],
   imports: [
     BrowserModule,

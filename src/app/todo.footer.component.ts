@@ -1,17 +1,30 @@
-import {Component} from '@angular/core';
+import {Component} from '@angular/core'
 
 
 @Component({
+
   selector: 'todo-footer',
-  templateUrl: './todo.main.component.html'
-  
+  templateUrl: './todo.footer.component.html'
 
 })
 
-export class TodoFooter{
 
-    footer:string;
-    constructor(f){
-        this.footer=f;
+export class TodoFooter{
+    
+ 
+      footerText:string;
+
+    constructor(){
+        this.footerText="Default Footer";
     }
+
+    get FooterValue(){
+        
+        return this.footerText;
+    }
+set FooterValue(value){
+    this.footerText=value;
+}
+
+   
 }
