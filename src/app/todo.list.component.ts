@@ -9,27 +9,34 @@ import {TodoMainData} from './todo.main.data.component';
 })
 export class TodoList implements OnInit,OnChanges{
    
+   todoLocalList:Array<TodoMainData>
     @Input()
     todoList:Array<TodoMainData>
 
     ngOnInit(){
-        //this.bindArrayToComponent();
+        this.bindArrayToComponent();
     }
     constructor(){
-
+        this.todoLocalList=new Array<TodoMainData>();
     }
 
     ngOnChanges(changes:SimpleChanges){
         if(changes['todoList']){
-          // this.bindArrayToComponent();
+         this.bindArrayToComponent();
         }
     }
 
-    // bindArrayToComponent(){
-    //     if(this.todoList!=undefined)
-    //    alert(this.todoList.length);
+    bindArrayToComponent(){
+        if(this.todoList!=undefined){
+            this.todoLocalList=this.todoList;
+            //this.todoLocalList.push(this.todoList);
+        }
+        //alert(this.todoLocalList.length);
+    }
 
-    // }
+    getArrayLength(){
+        //alert(this.todoLocalList.length);
+    }
 
     }
 //    todos:Array<TodoMainData>;

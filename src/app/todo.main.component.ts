@@ -13,14 +13,15 @@ import {TodoList} from './todo.list.component';
 export class TodoMain{
 
     todoData:TodoMainData;
-   // todoListData:TodoList;
-    arrayTodo:Array<TodoMainData>;
+    todoListData:Array<TodoMainData>;
+ 
    @Input() 
    showMainComponent:boolean;
     constructor(){
         this.showMainComponent=false;
 
         this.todoData=new TodoMainData("","",new Date('dd/MM/yyyy')); 
+        this.todoListData=new Array<TodoMainData>();
         //this.todoListData=new TodoList("");//new TodoList(new Array<TodoMainData>(this.todoData));
         
     }
@@ -29,10 +30,7 @@ export class TodoMain{
         //alert(value);
         this.todoData.task=value;
         this.todoData.activityDate="";//new Date('dd/MM/yyyy').toDateString();
-        this.arrayTodo=new Array<TodoMainData>();
-        this.arrayTodo.push(this.todoData);
-          alert(this.arrayTodo.length);
-       
+        this.todoListData.push(this.todoData);
     }
 
     getTodoList(){
