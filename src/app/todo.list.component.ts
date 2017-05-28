@@ -1,15 +1,36 @@
-import { Component } from '@angular/core';
-//import {TodoMainData} from './todo.main.data.component';
+import { Component,Input,OnChanges,OnInit,SimpleChanges } from '@angular/core';
+import {TodoMainData} from './todo.main.data.component';
 
 @Component({
   selector: 'todo-list',
   templateUrl: './todo.list.component.html',
 
+
 })
-export class TodoList{
-    test:string;
-    constructor(t){
-        this.test=t;
+export class TodoList implements OnInit,OnChanges{
+   
+    @Input()
+    todoList:Array<TodoMainData>
+
+    ngOnInit(){
+        //this.bindArrayToComponent();
+    }
+    constructor(){
+
+    }
+
+    ngOnChanges(changes:SimpleChanges){
+        if(changes['todoList']){
+          // this.bindArrayToComponent();
+        }
+    }
+
+    // bindArrayToComponent(){
+    //     if(this.todoList!=undefined)
+    //    alert(this.todoList.length);
+
+    // }
+
     }
 //    todos:Array<TodoMainData>;
 //    showList:boolean;
@@ -27,4 +48,3 @@ export class TodoList{
 //     getTodoList(){
 //         return this.todos;
 //     }
-}

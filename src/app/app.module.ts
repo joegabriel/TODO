@@ -14,6 +14,7 @@ import {TodoNavComponent} from './todo.nav.component';
 import {TodoValidate} from './todo.validate.component';
 import {TodoMain} from './todo.main.component';
 import{TodoFooter} from './todo.footer.component';
+import{TodoList} from './todo.list.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import{TodoFooter} from './todo.footer.component';
     TodoNavComponent,
     TodoValidate,
     TodoMain,
-    TodoFooter
+    TodoFooter,
+    TodoList
 
   ],
   imports: [

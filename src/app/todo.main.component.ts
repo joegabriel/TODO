@@ -26,16 +26,13 @@ export class TodoMain{
     }
 
     addTodo(value){
-        alert(value);
-    //     this.todoData.task=value;
-    //     this.todoData.activityDate="";//new Date('dd/MM/yyyy').toDateString();
-    //    //alert(this.todoData.activityDate);
-    //     this.arrayTodo=new Array<TodoMainData>();
-    //     this.arrayTodo.push(this.todoData);
-    //     this.todoListData.setTodoList(this.arrayTodo);
-        
-        
-        
+        //alert(value);
+        this.todoData.task=value;
+        this.todoData.activityDate="";//new Date('dd/MM/yyyy').toDateString();
+        this.arrayTodo=new Array<TodoMainData>();
+        this.arrayTodo.push(this.todoData);
+          alert(this.arrayTodo.length);
+       
     }
 
     getTodoList(){
