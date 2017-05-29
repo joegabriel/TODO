@@ -10,6 +10,7 @@ import {TodoMainData} from './todo.main.data.component';
 export class TodoList implements OnInit,OnChanges{
    
    todoLocalList:Array<TodoMainData>
+   todostate:boolean
     @Input()
     todoList:Array<TodoMainData>
 
@@ -18,6 +19,7 @@ export class TodoList implements OnInit,OnChanges{
     }
     constructor(){
         this.todoLocalList=new Array<TodoMainData>();
+        this.todostate=false;
     }
 
     ngOnChanges(changes:SimpleChanges){
@@ -29,29 +31,11 @@ export class TodoList implements OnInit,OnChanges{
     bindArrayToComponent(){
         if(this.todoList!=undefined){
             this.todoLocalList=this.todoList;
-            //this.todoLocalList.push(this.todoList);
+ 
         }
-        //alert(this.todoLocalList.length);
-    }
-
-    getArrayLength(){
-        //alert(this.todoLocalList.length);
-    }
 
     }
-//    todos:Array<TodoMainData>;
-//    showList:boolean;
-//     constructor(t){
-//         this.todos=t;
-       
-//     }
 
-//     setTodoList(val){
-//         //alert(val.length);
-//         this.todos=val;
 
-//     }
+    }
 
-//     getTodoList(){
-//         return this.todos;
-//     }

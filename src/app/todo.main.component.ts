@@ -28,7 +28,11 @@ export class TodoMain{
 
     addTodo(value){
         //alert(value);
+        this.todoData=new TodoMainData("","",new Date('dd/MM/yyyy'));
+        let id=this.todoListData.length;
+        id++;
         this.todoData.task=value;
+        this.todoData.id=id;
         this.todoData.activityDate="";//new Date('dd/MM/yyyy').toDateString();
         this.todoListData.push(this.todoData);
     }
