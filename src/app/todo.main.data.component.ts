@@ -10,5 +10,6 @@ export class TodoMainData{
         this.task=t;
         this.activity=a;
         this.activityDate=d;
+        this.id=0;
     }
 }
