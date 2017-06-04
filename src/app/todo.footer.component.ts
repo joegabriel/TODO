@@ -4,7 +4,7 @@ import {Component} from '@angular/core'
 @Component({
 
   selector: 'todo-footer',
-  templateUrl: './todo.footer.component.html'
+  templateUrl: './views/todo.footer.component.html'
 
 })
 

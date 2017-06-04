@@ -4,7 +4,7 @@ import {TodoList} from './todo.list.component';
 
 @Component({
   selector: 'todo-main',
-  templateUrl: './todo.main.component.html'
+  templateUrl: './views/todo.main.component.html'
   
 
 })

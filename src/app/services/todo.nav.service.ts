@@ -1,5 +1,5 @@
 import{Injectable} from '@angular/core'
-import {NavData} from './todo.nav.data.component';
+import {NavData} from '../models/todo.nav.data.component';
 @Injectable()
 export class TodoNavService{
     menuData;

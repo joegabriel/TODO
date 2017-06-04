@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import {NavData} from './todo.nav.data.component';
-import {TodoNavService} from './todo.nav.service';
+import {NavData} from './models/todo.nav.data.component';
+import {TodoNavService} from './services/todo.nav.service';
 import {TodoFooter} from './todo.footer.component';
 
 
 @Component({
   selector: 'todo-nav',
-  templateUrl: './todo.nav.component.html',
+  templateUrl: './views/todo.nav.component.html',
   providers:[TodoNavService]
 
 })

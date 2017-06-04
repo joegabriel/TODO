@@ -3,7 +3,7 @@ import {TodoMainData} from './todo.main.data.component';
 
 @Component({
   selector: 'todo-list',
-  templateUrl: './todo.list.component.html',
+  templateUrl: './views/todo.list.component.html',
 
 
 })

@@ -1,5 +1,5 @@
 import{Injectable} from '@angular/core'
-import {TodoValidateData}from './todo.validate.data.component'
+import {TodoValidateData}from '../models/todo.validate.data.component'
 @Injectable(
 
 )
