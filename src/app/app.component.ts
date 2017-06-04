@@ -29,18 +29,12 @@ export class AppComponent implements OnInit {
   }
 
   getTitle(){
-    return this._httpService.getTodoData().subscribe(t=>this.title=t.todoTaskDate);
+    return this._httpService.getTodoData().subscribe(t=>this.title=t.todoTask);
 
 
   }
 
-  handler(t:TodoMapper){
 
-    this.todoMapper=t;
-    this.title=this.todoMapper.todoTaskDate;
-
-  
-  }
 
  
 

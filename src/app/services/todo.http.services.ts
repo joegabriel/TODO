@@ -1,6 +1,6 @@
 import{Injectable} from '@angular/core'
 import { Http, Response }  from '@angular/http';
-import { Headers} from '@angular/http';
+import { Headers,RequestOptions} from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
@@ -21,9 +21,14 @@ export class HttpServices<T>{
          return this.http.get(this.urlBase+this.actionTodo,{headers:this.getHeaders()}).map(this.extractData).catch(this.handleError);
 
     }
+    postTodoData(datatoPost:T):Observable<T>{
+      let options = new RequestOptions({ headers: this.getHeaders() });
+      return this.http.post(this.urlBase+this.actionTodo+"/AddTodo",datatoPost,options).map(this.extractData).catch(this.handleError);
+    }
     private getHeaders(){
     let headers = new Headers();
-    headers.append('Accept', 'application/json');
+    headers.append('Accept', 'text/plain'); 
+    headers.append('Content-Type','application/json')
     return headers;
   }
     
