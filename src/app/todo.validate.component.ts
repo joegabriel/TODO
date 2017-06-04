@@ -1,10 +1,10 @@
 import {Component} from '@angular/core'
-import {TodoValidateService} from './todo.nav.valiate.service'
-import{TodoValidateData} from './todo.validate.data.component'
+import {TodoValidateService} from './services/todo.nav.valiate.service'
+import{TodoValidateData} from './models/todo.validate.data.component'
 
 @Component({
   selector: 'todo-validate',
-  templateUrl: './TodoValidate.html',
+  templateUrl: './views/TodoValidate.html',
   providers:[TodoValidateService]
 
 })
